@@ -126,6 +126,8 @@ section {
 
 span {
     color: #b74b4b;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 .home-content h3 {
@@ -308,3 +310,23 @@ span {
 }
 
 
+.glow {
+    font-size: 80px;
+    color: #fff;
+    
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 0px #000000, 0 0 5px #a50101;
+    }
+    
+    to {
+      text-shadow: 0 0 0px #000000, 0 0 15px #a50101;
+    }
+}
+
+.social-icons {
+    display: inline-flex;
+
+}
