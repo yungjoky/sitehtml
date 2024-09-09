@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentText = '';
     let isDeleting = false;
     let isTyping = true;
-    let speed = 100; // Typing speed
-    let deleteSpeed = 50; // Deleting speed
-    let pauseTime = 1500; // Pause time between words
+    let speed = 100;
+    let deleteSpeed = 50; 
+    let pauseTime = 1500; 
 
     function type() {
         const text = texts[currentIndex];
@@ -44,18 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(type, isTyping ? speed : deleteSpeed);
     }
 
-    // Function to start the typing animation
+    
     function startTypingAnimation() {
         typingElement.classList.add('typing');
         type();
     }
-
-    // Preload audio and set it up
+ 
     const audio = document.getElementById('backgroundMusic');
     audio.volume = 0.05;
-    audio.loop = true; // Ensure it loops without delay
+    audio.loop = true; 
 
-    // User interaction trigger
+ 
     function playAudio() {
         audio.play().then(() => {
             console.log('Audio playing successfully');
@@ -63,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Audio play failed:', error);
         });
     }
-
-    // Ensure audio plays on mobile devices after interaction
+  
     document.getElementById('overlay').addEventListener('click', function() {
         const overlay = document.getElementById('overlay');
         overlay.classList.add('hidden');
@@ -72,15 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const mainContent = document.getElementById('mainContent');
         mainContent.classList.add('show');
 
-        // Attempt to play audio immediately
+        
         playAudio();
 
-        // Additional click/touch event listeners to ensure audio starts
+       
         document.body.addEventListener('click', playAudio, { once: true });
         document.body.addEventListener('touchstart', playAudio, { once: true });
         document.body.addEventListener('touchend', playAudio, { once: true });
 
-        // Start the typing animation after clicking
+       
         startTypingAnimation();
     });
 
@@ -94,9 +92,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   const socialIcons = document.querySelectorAll('.social-icons a');
 
-    // Add event listener to each social icon
+   
     socialIcons.forEach(icon => {
         icon.addEventListener('contextmenu', function(e) {
-            e.preventDefault(); // Prevent the default context menu from appearing
+            e.preventDefault(); 
         });
     });
