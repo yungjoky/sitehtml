@@ -180,8 +180,8 @@ span {
     transition: 0.3s ease;
     color: #b74b4b;
     -webkit-user-drag: none;
-    -webkit-touch-callout: none; /* Disable long-press context menu in iOS Safari */
-    -webkit-user-select: none;   /* Disable text selection */
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;   
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
@@ -280,40 +280,40 @@ span {
     }
 }
 
-/* Overlay styles */
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(50px); /* Apply blur effect */
-    background: rgba(0, 0, 0, 0); /* Fully transparent background */
+    backdrop-filter: blur(50px); 
+    background: rgba(0, 0, 0, 0); 
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    cursor: pointer; /* Make it clickable */
-    transition: opacity 1s ease; /* Smooth transition for fade out */
+    cursor: pointer; 
+    transition: opacity 1s ease; 
     cursor: url('crimson1.png'), pointer;
 }
 
 .overlay.hidden {
     opacity: 0;
-    pointer-events: none; /* Disable interactions when hidden */
+    pointer-events: none; 
 }
 
 .overlay .text {
     font-size: 24px;
     color: #ffffff;
     text-align: center;
-    cursor: pointer; /* Make text clickable */
+    cursor: pointer; 
 }
 
-/* Main content transition */
+
 .home {
     opacity: 1;
-    transition: opacity 1s ease; /* Smooth transition for fade in */
+    transition: opacity 1s ease; 
 }
 
 .home.show {
